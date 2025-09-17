@@ -226,8 +226,7 @@ inline std::string getLambdaName(const char* parentScope, const std::string& lam
 }
 
 void initializeFullLogFunction(
-    const std::function<void(
-        const int, const std::string&, const std::string&, const int, const std::string&, const std::string&, va_list)>&
+    const std::function<void(const int, const char*, const char*, const int, const char*, const char*, va_list)>&
         callback);
 
 #ifdef __cplusplus

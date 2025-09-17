@@ -43,11 +43,11 @@ public:
      *
      */
     void start(const std::function<void(const int,
-                                        const std::string&,
-                                        const std::string&,
+                                        const char*,
+                                        const char*,
                                         const int,
-                                        const std::string&,
-                                        const std::string&,
+                                        const char*,
+                                        const char*,
                                         va_list)>& logFunction);
 
     /**

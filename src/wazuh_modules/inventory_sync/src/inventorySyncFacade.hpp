@@ -20,7 +20,7 @@
 #include "singleton.hpp"
 #include <asyncValueDispatcher.hpp>
 #include <filesystem>
-#include <format>
+// #include <format> // Removed: C++20 feature not available in C++17
 #include <functional>
 #include <indexerConnector.hpp>
 #include <json.hpp>
@@ -288,7 +288,7 @@ public:
                         m_indexerConnector->deleteByQuery(res.context->moduleName, res.context->agentId);
                     }
 
-                    const auto prefix = std::format("{}_", res.context->sessionId);
+                    const auto prefix = std::to_string(res.context->sessionId) + "_";
 
                     // Lock indexer connector to avoid process with the timeout mechanism.
                     auto lock = m_indexerConnector->scopeLock();
